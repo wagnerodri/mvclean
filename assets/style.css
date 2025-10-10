@@ -1,0 +1,47 @@
+body {
+	/* Fundo animado com gradiente criativo */
+	background: linear-gradient(120deg, #232a2f 0%, #1b1c1c 60%, #f6b91c 100%);
+	background-size: 200% 200%;
+	animation: bodyGradientMove 12s ease-in-out infinite alternate;
+	font-family: 'Inter', Arial, Helvetica, sans-serif;
+	color: #fff;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+/* Animação para links do menu */
+.nav-link-anim {
+  transition: color 0.3s, transform 0.3s;
+}
+.nav-link-anim:hover {
+  color: #43ea7c;
+  transform: scale(1.08);
+}
+
+/* Animação para ícones das redes sociais */
+.btn-icon {
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.btn-icon:hover {
+  box-shadow: 0 4px 24px rgba(67,234,124,0.18), 0 2px 24px rgba(246,185,28,0.13);
+  transform: scale(1.15) rotate(-8deg);
+}
+
+/* Animação para o botão Fale Conosco */
+.anim-fale {
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.anim-fale:hover {
+  background: #43ea7c;
+  color: #181b1e;
+  box-shadow: 0 8px 32px rgba(67,234,124,0.18);
+  transform: scale(1.08);
+}
+
+/* Comentários:
+- .nav-link-anim: animação suave no menu ao passar o mouse
+- .btn-icon: animação de destaque nas redes sociais ao passar o mouse
+- .anim-fale: animação no botão Fale Conosco ao passar o mouse
+*/
+
