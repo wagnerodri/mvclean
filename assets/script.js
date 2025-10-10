@@ -1,4 +1,3 @@
-
 // Bolha Menu Mobile
 document.addEventListener('DOMContentLoaded', function() {
 	var menuBubble = document.getElementById('menuBubble');
@@ -32,3 +31,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Menu sempre visível, sem JS necessário
+
+// Script para funcionalidade do menu hambúrguer
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  }
+});

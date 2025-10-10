@@ -10,38 +10,543 @@ body {
 	padding: 0;
 }
 
+/* Estilos movidos do index.html */
+
+/* Header */
+.nav {
+  background: #000;
+  padding: 0 0;
+  box-shadow: 0 2px 16px rgba(67, 234, 124, 0.08);
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 96px;
+  width: 100%;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+  justify-content: flex-start;
+}
+.logo img {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+.nav-links {
+  display: flex;
+  gap: 38px;
+  justify-content: center;
+  flex: 1;
+}
+.nav-link-anim {
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.08rem;
+  position: relative;
+}
+.social-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+  min-width: 220px;
+}
+.btn-icon {
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.instagram {
+  background: linear-gradient(135deg, #fd1d1d 0%, #833ab4 50%, #fcb045 100%);
+}
+.email {
+  background: #ea4335;
+}
+.whatsapp {
+  background: #25d366;
+}
+
+/* Hero Section */
+.hero-produtos {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(67, 234, 124, 0.10);
+  margin: 24px 0;
+}
+.hero-produtos video {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  opacity: 0.35;
+}
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-content-inner {
+  padding: 32px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.eyebrow {
+  color: #43ea7c;
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-align: center;
+  display: block;
+}
+.hero-title {
+  font-size: 2.1rem;
+  color: #fff;
+  font-weight: 900;
+  margin: 12px 0 18px 0;
+  line-height: 1.15;
+  text-align: center;
+}
+.hero-description {
+  font-size: 1.15rem;
+  color: #eaf7e1;
+  font-weight: 500;
+  margin-bottom: 28px;
+  line-height: 1.5;
+  text-align: center;
+}
+.hero-btn {
+  text-decoration: none;
+  font-size: 1.15rem;
+  padding: 16px 38px;
+  border-radius: 999px;
+  background: #f6b91c;
+  color: #232a2f;
+  font-weight: 800;
+  box-shadow: 0 4px 24px rgba(246, 185, 28, 0.13);
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Cards Section */
+.cards-group {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 48px 0 0 0;
+}
+.card-modern {
+  background: #232a2f;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(67, 234, 124, 0.08);
+  padding: 32px 24px;
+  max-width: 320px;
+  flex: 1;
+  min-width: 260px;
+  text-align: center;
+}
+.card-inner {
+  background: radial-gradient(circle at 60% 40%, #43ea7c 0%, #232a2f 70%, #181b1e 100%);
+  border-radius: 24px;
+  box-shadow: 0 12px 48px rgba(67, 234, 124, 0.22), 0 2px 24px rgba(0, 0, 0, 0.18);
+  padding: 38px 24px;
+  max-width: 370px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: cardPop 1.2s cubic-bezier(.4, 0, .2, 1);
+  backdrop-filter: blur(6px);
+  border: 1.5px solid rgba(67, 234, 124, 0.18);
+  position: relative;
+  overflow: hidden;
+}
+.decor-top {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #43ea7c 0%, #f6b91c 100%);
+  opacity: 0.18;
+  border-radius: 50%;
+  filter: blur(8px);
+}
+.decor-bottom {
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #f6b91c 0%, #43ea7c 100%);
+  opacity: 0.13;
+  border-radius: 50%;
+  filter: blur(8px);
+}
+.card-title {
+  font-size: 1.35rem;
+  color: #f6b91c;
+  margin-bottom: 12px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+}
+.card-description {
+  font-size: 1.08rem;
+  color: #eaf7e1;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 220px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background: #181b1e;
+  padding: 38px 0 24px 0;
+  margin-top: 48px;
+  box-shadow: 0 -2px 16px rgba(67, 234, 124, 0.08);
+  border-radius: 24px 24px 0 0;
+}
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.footer-logo img {
+  width: 96px;
+  height: 96px;
+  border-radius: 24px;
+  object-fit: cover;
+}
+.footer-info {
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
+}
+.footer-info a {
+  color: #43ea7c;
+  text-decoration: none;
+  font-weight: 700;
+}
+.footer-social {
+  min-width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+/* Copyright */
+.copyright-block {
+  width: 100%;
+  background: #111;
+  padding: 12px 0 8px 0;
+}
+.copyright-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.copyright-text {
+  color: #888;
+  font-size: 0.98rem;
+  text-align: center;
+}
+.copyright-credit {
+  display: block;
+  color: #888;
+  font-size: 0.89rem;
+  margin-top: 4px;
+  text-align: center;
+}
+.copyright-credit a {
+  color: #43ea7c;
+  text-decoration: none;
+  font-weight: 700;
+}
+
 /* Animação para links do menu */
 .nav-link-anim {
   transition: color 0.3s, transform 0.3s;
 }
 .nav-link-anim:hover {
   color: #43ea7c;
-  transform: scale(1.08);
+  transform: translateY(-2px);
 }
 
-/* Animação para ícones das redes sociais */
-.btn-icon {
-  transition: box-shadow 0.3s, transform 0.3s;
+/* ============================= */
+/* 🌐 MODO RESPONSIVO COMPLETO   */
+/* ============================= */
+
+/* --- MENU HAMBÚRGUER --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
 }
-.btn-icon:hover {
-  box-shadow: 0 4px 24px rgba(67,234,124,0.18), 0 2px 24px rgba(246,185,28,0.13);
-  transform: scale(1.15) rotate(-8deg);
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
 }
 
-/* Animação para o botão Fale Conosco */
-.anim-fale {
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
-}
-.anim-fale:hover {
-  background: #43ea7c;
-  color: #181b1e;
-  box-shadow: 0 8px 32px rgba(67,234,124,0.18);
-  transform: scale(1.08);
+/* --- TELA ATÉ 1024px (TABLETS GRANDES) --- */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .cards-group {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  .footer-container {
+    gap: 32px;
+  }
 }
 
-/* Comentários:
-- .nav-link-anim: animação suave no menu ao passar o mouse
-- .btn-icon: animação de destaque nas redes sociais ao passar o mouse
-- .anim-fale: animação no botão Fale Conosco ao passar o mouse
-*/
+/* --- TELA ATÉ 768px (TABLETS E CELULARES GRANDES) --- */
+@media (max-width: 768px) {
+  /* Menu */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: #000;
+    padding: 12px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  /* Remove social media icons */
+  .social-group {
+    display: none;
+  }
+
+  /* Hero */
+  .hero-produtos video {
+    height: 300px;
+  }
+
+  .hero-title {
+    font-size: 1.3rem;
+  }
+
+  .hero-description {
+    font-size: 0.85rem;
+  }
+
+  .hero-btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+
+  /* Cards */
+  .cards-group {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card-inner {
+    padding: 20px;
+  }
+
+  /* Sobre nós */
+  .sobre-row {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .sobre-row img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Rodapé */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .footer-logo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .footer-info {
+    font-size: 0.9rem;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .copyright-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* --- TELA ATÉ 480px (CELULARES PEQUENOS) --- */
+@media (max-width: 480px) {
+  /* Hero */
+  .hero-produtos video {
+    height: 220px;
+  }
+
+  .hero-title {
+    font-size: 1.1rem;
+  }
+
+  .hero-description {
+    font-size: 0.75rem;
+  }
+
+  .hero-btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+
+  /* Cards */
+  .card-inner h3 {
+    font-size: 1rem;
+  }
+
+  .card-inner p {
+    font-size: 0.8rem;
+  }
+
+  /* Sobre */
+  .sobre-row {
+    gap: 20px;
+  }
+
+  /* Rodapé */
+  .footer-info {
+    font-size: 0.8rem;
+  }
+
+  .footer-logo img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .footer-social a img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Ajustando o menu hambúrguer para abrir de forma organizada */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: #000;
+  padding: 12px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.nav-links li {
+  list-style: none;
+  margin: 10px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 8px 0;
+  display: block;
+  transition: background 0.3s;
+}
+
+.nav-links li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* --- TELA ACIMA DE 1280px (DESKTOPS GRANDES) --- */
+@media (min-width: 1280px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .social-group {
+    display: flex;
+  }
+}
+
+/* --- TELA ATÉ 1279px (TABLETS E CELULARES GRANDES) --- */
+@media (max-width: 1279px) {
+  .social-group {
+    display: none;
+  }
+}
 
