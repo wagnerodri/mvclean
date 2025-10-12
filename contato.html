@@ -22,8 +22,8 @@
     </div>
     <nav class="nav-links desktop-menu" aria-label="Main navigation">
       <ul>
-        <li><a href="index.html" class="nav-link-anim">Início</a></li>
-        <li><a href="sobre-nos.html" class="nav-link-anim">Sobre nós</a></li>
+        <li><a href="index.html#inicio" class="nav-link-anim">Início</a></li>
+        <li><a href="sobre-nos.html" class="nav-link-anim">Quem Somos</a></li>
         <li><a href="servicos.html" class="nav-link-anim">Serviços</a></li>
         <li><a href="contato.html" class="nav-link-anim">Contato</a></li>
       </ul>
@@ -43,7 +43,7 @@
 </header>
 
 <!-- Main Content -->
-<section class="contact-section" style="max-width:1200px;margin:60px auto;padding:0 24px;">
+<section id="contact" class="contact-section" style="max-width:1200px;margin:60px auto;padding:0 24px;">
   <h1 style="text-align:center;font-size:2.5rem;color:#f6b91c;margin-bottom:40px;font-weight:900;">Entre em Contato</h1>
   <div class="contact-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;">
     <div class="contact-info" style="background:#232a2f;border-radius:16px;padding:32px;text-align:center;box-shadow:0 4px 24px rgba(67,234,124,0.08);">
@@ -57,14 +57,8 @@
       </div>
     </div>
     <div class="contact-form" style="background:#232a2f;border-radius:16px;padding:32px;text-align:center;box-shadow:0 4px 24px rgba(67,234,124,0.08);">
-      <h3 style="color:#43ea7c;font-size:1.5rem;margin-bottom:16px;font-weight:800;">Envie uma Mensagem</h3>
-      <form action="#" method="post" style="display:flex;flex-direction:column;gap:16px;">
-        <input type="text" name="name" placeholder="Seu Nome" required style="padding:12px;border-radius:8px;border:none;background:#181b1e;color:#fff;font-size:1rem;">
-        <input type="email" name="email" placeholder="Seu E-mail" required style="padding:12px;border-radius:8px;border:none;background:#181b1e;color:#fff;font-size:1rem;">
-        <input type="tel" name="phone" placeholder="Seu Telemóvel" style="padding:12px;border-radius:8px;border:none;background:#181b1e;color:#fff;font-size:1rem;">
-        <textarea name="message" placeholder="Sua Mensagem" rows="5" required style="padding:12px;border-radius:8px;border:none;background:#181b1e;color:#fff;font-size:1rem;resize:vertical;"></textarea>
-        <button type="submit" style="padding:12px;border-radius:8px;border:none;background:#f6b91c;color:#232a2f;font-size:1.1rem;font-weight:800;cursor:pointer;">Enviar Mensagem</button>
-      </form>
+      <h3 style="color:#43ea7c;font-size:1.5rem;margin-bottom:16px;font-weight:800;">Nossa Localização</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3084.123!2d-7.5!3d40.2833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDAuMjgzMywtNy41!5e0!3m2!1sen!2spt!4v1234567890!5m2!1sen!2spt" width="100%" height="300" style="border:0;border-radius:8px;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </div>
 </section>
@@ -102,6 +96,14 @@
     <span class="copyright-credit">Criado por: <a href="mailto:warodri1@gmail.com">warodri1@gmail.com</a></span>
   </div>
 </div>
+
+<!-- Botão Voltar ao Topo -->
+<button id="back-to-top" class="back-to-top-btn" title="Voltar ao Topo">
+  <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <path d="M12 4l8 8h-6v8h-4v-8H4l8-8z" fill="#fff"/>
+  </svg>
+</button>
+
 <script src="assets/script.js"></script>
 </body>
 </html>

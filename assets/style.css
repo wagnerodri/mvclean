@@ -598,3 +598,74 @@ footer {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(67, 234, 124, 0.2);
 }
+
+/* Animações */
+.animate-btn {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.contact-balloon {
+  position: relative;
+  background: #43ea7c;
+  color: #232a2f;
+  padding: 12px 20px;
+  border-radius: 20px;
+  margin: 20px auto 0;
+  max-width: 200px;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(67, 234, 124, 0.3);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.contact-balloon::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #43ea7c;
+}
+
+.animate-balloon {
+  animation: bounceIn 1s ease-out;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.balloon-text {
+  font-size: 1rem;
+}
+
+/* Botão de contato nos cards de serviço */
+.contact-btn {
+  margin-top: 16px;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #43ea7c;
+  color: #232a2f;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #f6b91c;
+}
