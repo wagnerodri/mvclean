@@ -511,85 +511,246 @@ footer {
   }
 }
 
-/* ====== MEDIA QUERIES ====== */
-/* Tablets / Medium Screens */
-@media (max-width: 1024px) {
+/* ====== MEDIA QUERIES PROFISSIONAIS ======
+   Breakpoints organizados por prioridade e cobertura abrangente */
+
+/* ===== ULTRA WIDE SCREENS ===== */
+@media (min-width: 1440px) {
+  .nav-container { max-width: 1400px; }
+  .hero-produtos { max-width: 1400px; }
+  .cards-group { max-width: 1400px; }
+  .services-section { max-width: 1400px; }
+  .sobre-nos { max-width: 1400px; }
+  .footer-container { max-width: 1400px; }
+  .contact-grid { max-width: 1400px; margin: 0 auto; }
+}
+
+/* ===== DESKTOP LARGE (1280px - 1439px) ===== */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .hamburger { display: none; }
+  .nav-links.desktop-menu { display: flex; }
+  .nav-links.mobile-menu { display: none; }
+  .services-grid { grid-template-columns: repeat(4, 1fr); }
+  .contact-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+}
+
+/* ===== DESKTOP MEDIUM (1024px - 1279px) ===== */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hamburger { display: none; }
+  .nav-links.desktop-menu { display: flex; }
+  .nav-links.mobile-menu { display: none; }
+  .services-grid { grid-template-columns: repeat(3, 1fr); }
+  .contact-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .hero-title { font-size: 2.1rem; }
+  .hero-description { font-size: 1.1rem; }
+}
+
+/* ===== TABLET LARGE (768px - 1023px) ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
   .hamburger { display: flex; }
   .nav-links.desktop-menu { display: none; }
+  .nav-links.mobile-menu { display: none; }
+
+  .hamburger.active + .nav-links.mobile-menu { display: flex; }
+
   .hero-title { font-size: 1.9rem; }
   .hero-description { font-size: 1.05rem; }
+  .hero-btn { font-size: 1rem; padding: 14px 32px; }
+
   .cards-group { gap: 24px; }
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .card-modern { max-width: 100%; flex: 1 1 45%; min-width: 280px; }
+  .card-inner { padding: 32px 20px; }
+
+  .services-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .service-card { padding: 28px; }
+
+  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .contact-info, .contact-form { max-width: 100%; }
+
+  .sobre-nos { padding: 0 20px; }
+  .sobre-row { gap: 32px; }
+  .sobre-img { width: 300px; height: 200px; }
+
+  .footer-container { flex-direction: column; text-align: center; gap: 24px; }
+  .footer-info { text-align: center; }
+  .footer-social { justify-content: center; }
 }
 
-/* Mobile / Small Screens */
-@media (max-width: 768px) {
+/* ===== TABLET SMALL / MOBILE LARGE (480px - 767px) ===== */
+@media (min-width: 480px) and (max-width: 767px) {
   .hamburger { display: flex; }
-  .nav-links {
-    display: none;
+  .nav-links.desktop-menu { display: none; }
+  .nav-links.mobile-menu { display: none; }
+
+  .hamburger.active + .nav-links.mobile-menu { display: flex; }
+
+  .nav-links.mobile-menu {
     flex-direction: column;
-    width: 100%;
-    background: #1d1b1b;
-    padding: 16px 0;
-    border-top: 1px solid rgba(255,255,255,0.1);
     align-items: center;
     gap: 24px;
-  }
-  .nav-links.active { display: flex; }
-
-  /* Redes sociais dentro do menu mobile */
-  .nav-links .social-icons {
-    display: flex !important;
-    justify-content: center;
-    margin-top: 12px;
+    padding: 20px 0;
   }
 
-  .nav-links .social-icons a {
-    color: #f6b91c;
-    font-size: 1.3rem;
+  .nav-links.mobile-menu .social-icons {
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 6px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    gap: 16px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.1);
   }
 
-  .nav-links .social-icons a:hover {
-    background: rgba(67, 234, 124, 0.15);
-    color: #fff;
-  }
+  .hero-produtos { margin: 20px auto; width: 95%; }
+  .hero-produtos video { height: 250px; }
+  .hero-title { font-size: 1.5rem; }
+  .hero-description { font-size: 0.95rem; }
+  .hero-btn { font-size: 0.9rem; padding: 10px 18px; }
 
-  .services-grid { gap: 24px; }
-  .services-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-  .service-card { padding: 24px; }
-  .service-card h3 { font-size: 1.3rem; }
-  .service-card p { font-size: 1rem; }
+  .cards-group { gap: 20px; margin: 40px auto; }
+  .card-modern { max-width: 100%; flex: 1 1 100%; }
+  .card-inner { padding: 28px 18px; }
+  .card-inner h3 { font-size: 1.1rem; }
+  .card-inner p { font-size: 0.9rem; }
 
-  .before-after-container { gap: 12px; }
-  .before-after-item { min-width: 100px; max-width: 120px; }
-  .service-image { height: 80px; }
-  .label { font-size: 0.7rem; padding: 2px 6px; }
+  .services-section { padding: 0 20px; }
+  .services-section h1 { font-size: 2.2rem; margin-bottom: 32px; }
+  .services-grid { gap: 20px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .service-card { padding: 20px; }
+  .service-card h3 { font-size: 1.2rem; }
+  .service-card p { font-size: 0.95rem; }
+
+  .before-after-container { gap: 10px; }
+  .before-after-item { min-width: 110px; max-width: 130px; }
+  .service-image { height: 85px; }
+  .label { font-size: 0.75rem; padding: 3px 6px; }
   .point { font-size: 0.9rem; }
+
+  .contact-grid { grid-template-columns: 1fr; gap: 24px; padding: 0 20px; }
+  .contact-info, .contact-form { padding: 24px; }
+
+  .sobre-nos { padding: 0 20px; margin: 40px auto 0; }
+  .sobre-row { flex-direction: column; gap: 24px; margin-bottom: 32px; }
+  .sobre-img { width: 100%; height: 200px; }
+  .sobre-text { min-width: 100%; }
+  .sobre-text h2 { font-size: 1.8rem; }
+  .sobre-text p { font-size: 1rem; }
+
+  .benefit-card { padding: 20px; }
+
+  .footer-container { padding: 0 20px; gap: 20px; }
+  .footer-logo img { width: 60px; height: 60px; }
+  .footer-info div { font-size: 0.85rem; }
+  .footer-social { gap: 12px; }
+  .footer-social a svg { width: 24px; height: 24px; }
+
+  .copyright-block { padding: 10px 0; }
+  .copyright-text, .copyright-credit { font-size: 0.8rem; }
 }
 
-/* Mobile extra small */
-@media (max-width: 480px) {
-  .hero-produtos video { height: 220px; }
-  .hero-title { font-size: 1.2rem; }
-  .hero-description { font-size: 0.85rem; }
-  .hero-btn { font-size: 0.8rem; padding: 8px 16px; }
-  .card-inner h3 { font-size: 1rem; }
-  .card-inner p { font-size: 0.85rem; }
-  .footer-logo img { width: 72px; height: 72px; }
-  .logo img { width: 60px; height: 60px; }
+/* ===== MOBILE MEDIUM (360px - 479px) ===== */
+@media (min-width: 360px) and (max-width: 479px) {
+  .nav-container { padding: 0 15px; height: 80px; }
+  .logo img { width: 50px; height: 50px; }
+  .hamburger div { width: 20px; height: 2px; }
+
+  .hero-produtos { margin: 15px auto; width: 95%; }
+  .hero-produtos video { height: 180px; }
+  .hero-content-inner { padding: 24px 16px; }
+  .eyebrow { font-size: 1rem; }
+  .hero-title { font-size: 1.1rem; }
+  .hero-description { font-size: 0.8rem; }
+  .hero-btn { font-size: 0.75rem; padding: 8px 14px; }
+
+  .cards-group { gap: 16px; margin: 32px auto; }
+  .card-modern { max-width: 100%; }
+  .card-inner { padding: 24px 16px; }
+  .card-inner h3 { font-size: 0.95rem; }
+  .card-inner p { font-size: 0.8rem; }
+
+  .services-section { padding: 0 15px; }
+  .services-section h1 { font-size: 2rem; margin-bottom: 30px; }
+  .services-grid { gap: 16px; grid-template-columns: 1fr; }
+  .service-card { padding: 16px; }
+  .service-card h3 { font-size: 1.1rem; }
+  .service-card p { font-size: 0.9rem; }
+
+  .before-after-container { gap: 8px; flex-direction: column; }
+  .before-after-item { min-width: 100%; max-width: 100%; }
+  .service-image { height: 120px; }
+  .label { font-size: 0.7rem; padding: 2px 5px; }
+
+  .contact-grid { padding: 0 15px; }
+  .contact-info, .contact-form { padding: 20px; }
+
+  .sobre-nos { padding: 0 15px; margin: 40px auto 0; }
+  .sobre-row { flex-direction: column; gap: 24px; margin-bottom: 32px; }
+  .sobre-img { width: 100%; height: 200px; }
+  .sobre-text { min-width: 100%; }
+  .sobre-text h2 { font-size: 1.8rem; }
+  .sobre-text p { font-size: 1rem; }
+
+  .benefit-card { padding: 16px; }
+
+  .footer-container { padding: 0 15px; gap: 20px; }
+  .footer-logo img { width: 60px; height: 60px; }
+  .footer-info div { font-size: 0.85rem; }
+  .footer-social { gap: 12px; }
+  .footer-social a svg { width: 24px; height: 24px; }
+
+  .copyright-block { padding: 10px 0; }
+  .copyright-text, .copyright-credit { font-size: 0.8rem; }
 }
 
-/* Desktop grande */
-@media (min-width: 1280px) {
-  .hamburger { display: none; }
-  .nav-links { display: flex; flex-direction: row; gap: 20px; }
-  .social-icons { display: flex; }
+/* ===== MOBILE SMALL (até 359px) ===== */
+@media (max-width: 359px) {
+  .nav-container { padding: 0 10px; height: 70px; }
+  .logo img { width: 45px; height: 45px; }
+  .hamburger div { width: 18px; height: 2px; }
+
+  .hero-produtos { margin: 10px auto; width: 98%; }
+  .hero-produtos video { height: 150px; }
+  .hero-content-inner { padding: 20px 12px; }
+  .eyebrow { font-size: 0.9rem; }
+  .hero-title { font-size: 1rem; }
+  .hero-description { font-size: 0.75rem; }
+  .hero-btn { font-size: 0.7rem; padding: 6px 12px; }
+
+  .cards-group { gap: 12px; margin: 24px auto; }
+  .card-inner { padding: 20px 12px; }
+  .card-inner h3 { font-size: 0.9rem; }
+  .card-inner p { font-size: 0.75rem; }
+
+  .services-section { padding: 0 10px; }
+  .services-section h1 { font-size: 1.8rem; margin-bottom: 24px; }
+  .services-grid { gap: 12px; }
+  .service-card { padding: 12px; }
+  .service-card h3 { font-size: 1rem; }
+  .service-card p { font-size: 0.85rem; }
+
+  .before-after-container { gap: 6px; }
+  .service-image { height: 100px; }
+  .label { font-size: 0.65rem; padding: 2px 4px; }
+  .point { font-size: 0.8rem; }
+
+  .contact-grid { padding: 0 10px; }
+  .contact-info, .contact-form { padding: 16px; }
+
+  .sobre-nos { padding: 0 10px; margin: 30px auto 0; }
+  .sobre-row { gap: 20px; margin-bottom: 24px; }
+  .sobre-img { height: 180px; }
+  .sobre-text h2 { font-size: 1.6rem; }
+  .sobre-text p { font-size: 0.95rem; }
+
+  .benefit-card { padding: 12px; }
+
+  .footer-container { padding: 0 10px; gap: 16px; }
+  .footer-logo img { width: 55px; height: 55px; }
+  .footer-info div { font-size: 0.8rem; }
+  .footer-social { gap: 10px; }
+  .footer-social a svg { width: 22px; height: 22px; }
+
+  .copyright-block { padding: 8px 0; }
+  .copyright-text, .copyright-credit { font-size: 0.75rem; }
 }
 
 /* Sobre Nós */

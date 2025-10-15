@@ -1,0 +1,35 @@
+# Robots.txt para Oliveira's Clean
+# Controla o acesso dos motores de busca
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /sobre-nos.html
+Allow: /servicos.html
+Allow: /contato.html
+
+# Bloqueia acesso a arquivos sensíveis
+Disallow: /assets/
+Disallow: /.htaccess
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /*.log$
+Disallow: /*.tmp$
+Disallow: /*.bak$
+Disallow: /*.backup$
+
+# Bloqueia crawlers maliciosos conhecidos
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap (quando implementado)
+# Sitemap: https://oliveirasclean.pt/sitemap.xml
+
+# Crawl-delay para ser educado com o servidor
+Crawl-delay: 1
