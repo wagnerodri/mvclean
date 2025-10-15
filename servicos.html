@@ -70,11 +70,11 @@
       <h3>Higienização de Cadeiras</h3>
       <div class="before-after-container">
         <div class="before-after-item">
-          <img src="imagem/before-chair.jpg" alt="Cadeira antes da limpeza" class="service-image">
+          <img src="imagem/cadeira antes.jpeg" alt="Cadeira antes da limpeza" class="service-image">
           <span class="label">Antes</span>
         </div>
         <div class="before-after-item">
-          <img src="imagem/after-chair.jpg" alt="Cadeira depois da limpeza" class="service-image">
+          <img src="imagem/cadeiradepois.jpeg" alt="Cadeira depois da limpeza" class="service-image">
           <span class="label">Depois</span>
         </div>
       </div>
@@ -107,26 +107,6 @@
       <a href="https://wa.me/351963754672" target="_blank" class="btn contact-btn animate-btn">Entre em contato</a>
     </div>
     <div class="service-card animate-service-card">
-      <h3>Limpeza de Estofados</h3>
-      <div class="before-after-container">
-        <div class="before-after-item">
-          <img src="imagem/before-upholstery.jpg" alt="Estofado antes da limpeza" class="service-image">
-          <span class="label">Antes</span>
-        </div>
-        <div class="before-after-item">
-          <img src="imagem/after-upholstery.jpg" alt="Estofado depois da limpeza" class="service-image">
-          <span class="label">Depois</span>
-        </div>
-      </div>
-      <p>Serviço completo para poltronas, puffs e outros estofados. Recuperação de cores e texturas com técnicas profissionais.</p>
-      <div class="reference-points">
-        <span class="point">• Recuperação de cores originais</span>
-        <span class="point">• Técnicas profissionais especializadas</span>
-        <span class="point">• Resultados visíveis e duradouros</span>
-      </div>
-      <a href="https://wa.me/351963754672" target="_blank" class="btn contact-btn animate-btn">Entre em contato</a>
-    </div>
-    <div class="service-card animate-service-card">
       <h3>Limpeza de Tapetes</h3>
       <div class="before-after-container">
         <div class="before-after-item">
@@ -143,26 +123,6 @@
         <span class="point">• Extração profunda de sujeira</span>
         <span class="point">• Revitalização das fibras</span>
         <span class="point">• Adequado para todos os tipos de tapete</span>
-      </div>
-      <a href="https://wa.me/351963754672" target="_blank" class="btn contact-btn animate-btn">Entre em contato</a>
-    </div>
-    <div class="service-card animate-service-card">
-      <h3>Limpeza de Cortinas</h3>
-      <div class="before-after-container">
-        <div class="before-after-item">
-          <img src="imagem/before-curtain.jpg" alt="Cortina antes da limpeza" class="service-image">
-          <span class="label">Antes</span>
-        </div>
-        <div class="before-after-item">
-          <img src="imagem/after-curtain.jpg" alt="Cortina depois da limpeza" class="service-image">
-          <span class="label">Depois</span>
-        </div>
-      </div>
-      <p>Lavagem e higienização de cortinas de tecido. Remoção de poeira acumulada e odores, deixando-as frescas e limpas.</p>
-      <div class="reference-points">
-        <span class="point">• Remoção completa de poeira</span>
-        <span class="point">• Eliminação de odores desagradáveis</span>
-        <span class="point">• Aparência renovada e fresca</span>
       </div>
       <a href="https://wa.me/351963754672" target="_blank" class="btn contact-btn animate-btn">Entre em contato</a>
     </div>
@@ -209,6 +169,23 @@
     <path d="M12 4l8 8h-6v8h-4v-8H4l8-8z" fill="#fff"/>
   </svg>
 </button>
+
+<!-- Modal para imagens -->
+<div id="image-modal" class="modal">
+  <span class="close">&times;</span>
+  <div class="modal-content">
+    <div class="modal-images">
+      <div class="modal-image-item">
+        <img id="modal-before" src="" alt="Antes">
+        <span class="modal-label">Antes</span>
+      </div>
+      <div class="modal-image-item">
+        <img id="modal-after" src="" alt="Depois">
+        <span class="modal-label">Depois</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="assets/script.js"></script>
 </body>

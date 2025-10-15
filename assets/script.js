@@ -67,3 +67,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// Modal para imagens dos serviços
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('image-modal');
+  const modalBefore = document.getElementById('modal-before');
+  const modalAfter = document.getElementById('modal-after');
+  const closeBtn = document.querySelector('.close');
+
+  // Adicionar evento de clique aos cards de serviço
+  const serviceCards = document.querySelectorAll('.service-card');
+  serviceCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Não abrir modal se clicar no botão de contato
+      if (e.target.classList.contains('contact-btn') || e.target.closest('.contact-btn')) {
+        return;
+      }
+
+      const beforeImg = card.querySelector('.before-after-item:first-child img');
+      const afterImg = card.querySelector('.before-after-item:last-child img');
+
+      if (beforeImg && afterImg) {
+        modalBefore.src = beforeImg.src;
+        modalAfter.src = afterImg.src;
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Previne scroll
+      }
+    });
+  });
+
+  // Fechar modal
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
+  }
+
+  // Fechar modal ao clicar fora
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
+
+  // Fechar com tecla ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'flex') {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
+});
