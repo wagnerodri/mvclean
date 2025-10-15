@@ -35,13 +35,31 @@ document.addEventListener('DOMContentLoaded', function() {
 // Script para funcionalidade do menu hambúrguer
 document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
+  const mobileMenu = document.querySelector('.nav-links.mobile-menu');
 
-  if (hamburger && navLinks) {
+  if (hamburger && mobileMenu) {
     hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
     });
   }
+
+  // Fechar menu ao clicar em um link
+  const mobileLinks = document.querySelectorAll('.nav-links.mobile-menu a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    });
+  });
+
+  // Fechar menu ao clicar fora
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    }
+  });
 });
 
 // Back to Top Button
