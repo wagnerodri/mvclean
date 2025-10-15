@@ -91,9 +91,9 @@ body {
 .hamburger {
   display: none;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   cursor: pointer;
-  padding: 8px;
+  padding: 12px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
@@ -103,8 +103,8 @@ body {
 }
 
 .hamburger div {
-  width: 25px;
-  height: 3px;
+  width: 30px;
+  height: 4px;
   background: #08d46e;
   border-radius: 3px;
   transition: all 0.3s ease;
@@ -196,7 +196,7 @@ body {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   animation: heroBtnGlow 3s ease-in-out infinite alternate;
 }
 
@@ -660,18 +660,110 @@ footer {
 
 /* ===== DESKTOP LARGE (1280px - 1439px) ===== */
 @media (min-width: 1280px) and (max-width: 1439px) {
-  .hamburger { display: none; }
-  .nav-links.desktop-menu { display: flex; }
-  .nav-links.mobile-menu { display: none; }
+  .hamburger { display: flex; }
+  .nav-links.desktop-menu { display: none; }
+  .nav-links.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 96px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 96px);
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.mobile-menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-links.mobile-menu ul {
+    flex-direction: column;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-links.mobile-menu ul li a {
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.mobile-menu ul li a:hover {
+    background: rgba(67, 234, 124, 0.1);
+    color: #43ea7c;
+  }
   .services-grid { grid-template-columns: repeat(4, 1fr); }
   .contact-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
 }
 
 /* ===== DESKTOP MEDIUM (1024px - 1279px) ===== */
 @media (min-width: 1024px) and (max-width: 1279px) {
-  .hamburger { display: none; }
-  .nav-links.desktop-menu { display: flex; }
-  .nav-links.mobile-menu { display: none; }
+  .hamburger { display: flex; }
+  .nav-links.desktop-menu { display: none; }
+  .nav-links.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 96px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 96px);
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.mobile-menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-links.mobile-menu ul {
+    flex-direction: column;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-links.mobile-menu ul li a {
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.mobile-menu ul li a:hover {
+    background: rgba(67, 234, 124, 0.1);
+    color: #43ea7c;
+  }
   .services-grid { grid-template-columns: repeat(3, 1fr); }
   .contact-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .hero-title { font-size: 2.1rem; }
@@ -732,16 +824,8 @@ footer {
 
   .hero-title { font-size: 1.9rem; }
   .hero-description { font-size: 1.05rem; }
-  .hero-btn {
-    font-size: 1rem;
-    padding: 16px 36px;
-    gap: 10px;
-  }
-
-  .hero-btn svg {
-    width: 18px;
-    height: 18px;
-  }
+  .hero-btn { font-size: 1rem; padding: 14px 32px; }
+  .hero-btn svg { width: 18px; height: 18px; }
 
   .cards-group { gap: 24px; }
   .card-modern { max-width: 100%; flex: 1 1 45%; min-width: 280px; }
@@ -818,17 +902,8 @@ footer {
   .hero-produtos video { height: 250px; }
   .hero-title { font-size: 1.5rem; }
   .hero-description { font-size: 0.95rem; }
-  .hero-btn {
-    font-size: 0.9rem;
-    padding: 14px 28px;
-    gap: 8px;
-    letter-spacing: 0.5px;
-  }
-
-  .hero-btn svg {
-    width: 16px;
-    height: 16px;
-  }
+  .hero-btn { font-size: 0.9rem; padding: 10px 18px; }
+  .hero-btn svg { width: 16px; height: 16px; }
 
   .cards-group { gap: 20px; margin: 40px auto; }
   .card-modern { max-width: 100%; flex: 1 1 100%; }
@@ -876,7 +951,8 @@ footer {
   .nav-container { padding: 0 15px; height: 80px; }
   .logo img { width: 50px; height: 50px; }
   .hamburger { display: flex; }
-  .hamburger div { width: 20px; height: 2px; }
+  .hamburger div { width: 25px; height: 3px; }
+  .hamburger { gap: 5px; padding: 10px; }
   .nav-links.desktop-menu { display: none; }
   .nav-links.mobile-menu {
     display: none;
@@ -932,17 +1008,9 @@ footer {
   .eyebrow { font-size: 1rem; }
   .hero-title { font-size: 1.1rem; }
   .hero-description { font-size: 0.8rem; }
-  .hero-btn {
-    font-size: 0.75rem;
-    padding: 12px 24px;
-    gap: 6px;
-    letter-spacing: 0.5px;
-  }
-
-  .hero-btn svg {
-    width: 14px;
-    height: 14px;
-  }
+  .hero-btn { font-size: 0.75rem; padding: 10px 16px; }
+  .hero-btn svg { width: 14px; height: 14px; }
+  .hero-btn { gap: 6px; }
 
   .cards-group { gap: 16px; margin: 32px auto; }
   .card-modern { max-width: 100%; }
@@ -989,7 +1057,8 @@ footer {
   .nav-container { padding: 0 10px; height: 70px; }
   .logo img { width: 45px; height: 45px; }
   .hamburger { display: flex; }
-  .hamburger div { width: 18px; height: 2px; }
+  .hamburger div { width: 22px; height: 3px; }
+  .hamburger { gap: 4px; padding: 8px; }
   .nav-links.desktop-menu { display: none; }
   .nav-links.mobile-menu {
     display: none;
@@ -1045,17 +1114,9 @@ footer {
   .eyebrow { font-size: 0.9rem; }
   .hero-title { font-size: 1rem; }
   .hero-description { font-size: 0.75rem; }
-  .hero-btn {
-    font-size: 0.7rem;
-    padding: 10px 20px;
-    gap: 5px;
-    letter-spacing: 0.5px;
-  }
-
-  .hero-btn svg {
-    width: 12px;
-    height: 12px;
-  }
+  .hero-btn { font-size: 0.7rem; padding: 8px 12px; }
+  .hero-btn svg { width: 12px; height: 12px; }
+  .hero-btn { gap: 4px; }
 
   .cards-group { gap: 12px; margin: 24px auto; }
   .card-inner { padding: 20px 12px; }
